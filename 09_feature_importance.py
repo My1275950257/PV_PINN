@@ -52,7 +52,7 @@ def run_feature_importance():
     plt.tight_layout()
     plt.savefig(figure_path("fig_pinn_param_importance.png"), dpi=200, bbox_inches="tight")
     plt.savefig(figure_path("fig_pinn_param_importance.svg"), format="svg", bbox_inches="tight")
-    plt.show()
+    plt.close()
 
     print(f"✅ 特征重要性已保存: {out_csv}")
     print(df.head(15).to_string(index=False))

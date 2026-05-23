@@ -118,7 +118,7 @@ class PVDataGenerator:
                 rs_factor = self.rng.uniform(3.0, 8.0)
             else:
                 rs_factor = self.rng.choice([
-                    self.rng.uniform(1.2, 2.0),
+                    self.rng.uniform(1.5, 2.2),
                     self.rng.uniform(2.0, 4.0),
                     self.rng.uniform(4.0, 8.0),
                 ], p=[0.35, 0.35, 0.30])
