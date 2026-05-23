@@ -31,7 +31,7 @@ class PV_PINN(nn.Module):
         pred_I0 = torch.pow(10, -5 - self.softplus(raw_output[:, 1]))
         pred_n = 1.0 + torch.sigmoid(raw_output[:, 2])
         pred_Rs = self.softplus(raw_output[:, 3])
-        pred_Rsh = 10.0 + self.softplus(raw_output[:, 4]) * 500.0
+        pred_Rsh = 0.5 + self.softplus(raw_output[:, 4]) * 500.0
 
         return torch.stack([pred_Iph, pred_I0, pred_n, pred_Rs, pred_Rsh], dim=1)
 
